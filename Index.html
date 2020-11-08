@@ -1,0 +1,385 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my social site</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Segoe UI;
+            min-width: 100%;
+            min-height: 100%;
+            position: relative;
+            margin: 0;
+        }
+        
+        .header {
+            width: 100%;
+            height: 80px;
+            max-height: 80px;
+            display: block;
+            background-color: rgb(66, 103, 178);
+            font-size: 60px;
+            position: fixed;
+            top: 0;
+            z-index: 100000;
+        }
+        
+        .header-login {
+            position: absolute;
+            margin-left: 150px;
+            margin-top: 25px;
+        }
+        
+        .header-login-1 {
+            margin-left: 800px;
+            margin-top: 30px;
+            height: 25px;
+            position: absolute;
+        }
+        
+        .header-login-2 {
+            margin-left: 1000px;
+            margin-top: 30px;
+            height: 25px;
+            position: absolute;
+        }
+        
+        .btn-sub {
+            margin-left: 1200px;
+            margin-top: 30px;
+            height: 20px;
+            background-color: rgb(66, 132, 178);
+            position: relative;
+            right: 20;
+            color: white;
+        }
+        
+        .btn-sub:hover {
+            background-color: cadetblue;
+        }
+        
+        button {
+            border-radius: 2px;
+            width: 90px;
+            transition: 0.6s;
+            background-color: rgb(66, 103, 178);
+        }
+        
+        button:hover {
+            border-radius: 5px;
+            background-color: white;
+        }
+        
+        h6 {
+            overflow: hidden;
+            border-right: .15em solid rgb(66, 103, 178);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            color: white;
+            animation: typing 1s steps(40, end), blink-caret .75s step-end;
+        }
+        
+        @keyframes typing {
+            from {
+                width: 0
+            }
+            to {
+                width: 100%
+            }
+        }
+        
+        @keyframes blink-caret {
+            from,
+            to {
+                border-color: transparent
+            }
+            50% {
+                border-color: rgb(66, 103, 178);
+            }
+        }
+        
+        .text {
+            margin-top: 150px;
+            font-weight: 800;
+            margin-left: 150px;
+            font-size: 20px;
+            color: rgb(66, 103, 178);
+            line-height: 1.5em;
+            z-index: 1000;
+        }
+        
+        .image {
+            margin-top: 0;
+            margin-left: 150px;
+            z-index: 1000;
+        }
+        
+        .create-text {
+            display: flex;
+            margin-left: 900px;
+            z-index: 1;
+            justify-items: top;
+        }
+        
+        .flex-box-2 {
+            display: inline-block;
+            position: relative;
+            margin-left: 800px;
+            right: 150;
+            bottom: 250;
+            color: black;
+            white-space: nowrap;
+        }
+        
+        .flex-box-cont {
+            max-width: 600px;
+        }
+        
+        .fn {
+            position: relative;
+            left: 650;
+            bottom: 200;
+        }
+        
+        .sn {
+            position: relative;
+            left: 850;
+            bottom: 238;
+        }
+        
+        .em-or-ph {
+            position: relative;
+            left: 650;
+            bottom: 210;
+        }
+        
+        .np {
+            position: relative;
+            left: 650;
+            bottom: 190;
+        }
+        
+        .DOM {
+            position: relative;
+            left: 650;
+            bottom: 170;
+        }
+        
+        .rbs {
+            font-weight: 100;
+            color: black;
+        }
+        
+        .rb {
+            position: relative;
+            left: 650;
+            bottom: 140;
+        }
+        
+        .rb-1 {
+            position: relative;
+            left: 735;
+            bottom: 168;
+        }
+        
+        .rb-2 {
+            position: relative;
+            left: 800;
+            bottom: 196;
+        }
+        
+        .btn-signup {
+            position: relative;
+            left: 650;
+            bottom: 180;
+        }
+        
+        .d-em,
+        .d-np {
+            padding: 0;
+            position: relative;
+            left: 0;
+            outline: none;
+            border: 1px solid teal;
+            border-color: rgba(0, 0, 0, .15);
+            background-color: white;
+            border-radius: 5px;
+            height: 40px;
+            width: 300px;
+        }
+        
+        .d-fn,
+        .d-sn,
+        .d-em,
+        .d-np {
+            padding: 10px;
+            position: relative;
+            left: 0;
+            outline: none;
+            border: 1px solid teal;
+            border-color: rgba(0, 0, 0, .15);
+            background-color: white;
+            border-radius: 5px;
+            height: 40px;
+            width: 150px;
+            color: black;
+            font-size: 18px;
+            z-index: 100;
+        }
+        
+        .d-sn::-webkit-input-placeholder,
+        .d-fn::-webkit-input-placeholder,
+        .d-em::-webkit-input-placeholder,
+        .d-np::-webkit-input-placeholder {
+            padding: 0;
+            color: grey;
+            font-size: 20px;
+        }
+        
+        .d-em,
+        .d-np {
+            width: 300px;
+        }
+        
+        .D-btn-signup {
+            height: 50px;
+            width: 150px;
+            color: white;
+            background-color: green;
+            border-radius: 10px;
+        }
+        
+        .D-btn-signup:hover {
+            background-color: forestgreen;
+            border-radius: 10px;
+            transition: 0.1s;
+            color: orange;
+        }
+        
+        .my-footer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            text-align: left;
+            font-size: 10px;
+            border-top: lightgrey;
+        }
+        
+        input,
+        select,
+        textarea {
+            color: black;
+        }
+        
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .signup-form {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .sub-text {
+            z-index: 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <span>
+<header>
+<div class="header">
+<div class="header-login">
+<h6>socially</h6>
+</div>
+<div class="header-login-1">
+<input type="text" class="text-1" placeholder="email or username"></input>
+</div>
+<div class="header-login-2">
+<input class="text-2" type="password" placeholder="password"></input>
+</div>
+<div class="header-login-3">
+<input class="btn-sub"type="submit" text="Log In"></input>
+</div>
+  </div>
+</header> 
+</span>
+    <div class="text">
+        <div class="flex-box-cont">
+            <p>Socially helps you connect and share with the<br> people in your life.</p>
+            <img src="stole.png">
+        </div>
+        <div class="flex-box-2">
+            <h1>Create an account</h1>
+            <div class="sub-text">
+                <h5> It's quick and easy</h5>
+            </div>
+        </div>
+        <form action="includes/login.inc.php" method="post">
+            <div class="signup-form">
+                <div class="fn">
+                    <input class="d-fn" color="black" type="text" placeholder="first name"></input>
+                </div>
+                <div class="sn">
+                    <input type="text" class="d-sn" color="black" placeholder="surname"></input>
+                </div>
+                <div class="em-or-ph">
+                    <input type="email" class="d-em" type="number" color="black" placeholder="email or phone number"></input>
+                </div>
+                <div class="np">
+                    <input type="password" class="d-np" color="black" placeholder="new password"></input>
+                </div>
+                <div class="DOM">
+                    <input type="date">
+                </div>
+                <div class="rbs">
+                    <div class="rb">
+                        <input name="checkmark" type="radio">Female</input>
+                    </div>
+                    <div class="rb-1">
+                        <input name="checkmark" type="radio">Male</input>
+                    </div>
+
+                    <div class="rb-2">
+                        <input name="checkmark" type="radio">Custom</input>
+                    </div>
+                </div>
+                <div class="btn-signup">
+                    <button class="D-btn-signup">Sign Up</button>
+                </div>
+            </div>
+        </form>
+        <div class="my-footer">
+            <footer>
+                ENGLISH(UK)<br>
+                <hr>
+                <a href="">Sign Up</a>
+                <a href="">Log In</a>
+            </footer>
+        </div>
+        <?php
+    
+    
+    ?>
+            <script>
+            </script>
+
+</body>
+
+</html>
